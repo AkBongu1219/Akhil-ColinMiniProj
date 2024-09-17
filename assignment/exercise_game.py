@@ -7,9 +7,25 @@ import time
 import random
 import json
 import requests
+import network
 
+# connect to wifi (ssid and password changed for security)
+ssid = 'Starry'
+password = 'fakepassword123'
 
-N: int = 3
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect(ssid, password)
+
+# Loop while attempting to connect to wifi
+while True:
+    if wlan.isconnected():
+        print('Connected')
+        break
+    print('Waiting for connection')
+    time.sleep(1)
+
+N: int = 10
 sample_ms = 10.0
 on_ms = 500
 
