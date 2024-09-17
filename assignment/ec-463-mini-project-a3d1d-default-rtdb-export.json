@@ -1,0 +1,22 @@
+{
+  "Exercise3Data": {
+    "-O6wqF4AAqhjmCvP3Tbn": {
+      "average response time": 0,
+      "maximum response time": 0,
+      "minimum response time": 0,
+      "score": 0
+    },
+    "-O6wqWtbvgu53n1pH_z1": {
+      "average response time": 270.6,
+      "maximum response time": 396,
+      "minimum response time": 208,
+      "score": 1
+    },
+    "-O6wqfl6Y9XXnGxkyZhM": {
+      "average response time": 381,
+      "maximum response time": 453,
+      "minimum response time": 268,
+      "score": 0.5
+    }
+  }
+}
