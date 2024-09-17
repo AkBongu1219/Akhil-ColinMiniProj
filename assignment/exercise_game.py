@@ -6,6 +6,7 @@ from machine import Pin
 import time
 import random
 import json
+import requests
 
 
 N: int = 3
@@ -54,6 +55,14 @@ def scorer(t: list[int | None]) -> None:
 
     print(t_good)
 
+    if misses == len(t):
+        min_time = max_time = avg_time = score = 0  # Set to 0 when all misses
+    else:
+        min_time = min(t_good)
+        max_time = max(t_good)
+        avg_time = sum(t_good) / len(t_good)
+        score = len(t_good) / len(t)
+        
     # add key, value to this dict to store the minimum, maximum, average response time
     # and score (non-misses / total flashes) i.e. the score a floating point number
     # is in range [0..1]
