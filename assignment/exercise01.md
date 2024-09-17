@@ -25,6 +25,7 @@ Experiment using exercise_light.py to find approximate max_bright and min_bright
 1. what are the "max_bright" and "min_bright" values you found?
 
    Ans:
+
    max_bright = 50000
 
    min_bright = 850
