@@ -83,6 +83,15 @@ def scorer(t: list[int | None]) -> None:
     print("write", filename)
 
     write_json(filename, data)
+    
+    database_api_url = "https://ec-463-mini-project-a3d1d-default-rtdb.firebaseio.com/Exercise3Data.json"
+    response = requests.post(database_api_url, json=data)
+    
+    # Check the response
+    if response.status_code == 200:
+        print("Upload successful")
+    else:
+        print(f"Upload failed. Status code: {response.status_code}")
 
 
 if __name__ == "__main__":
